@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  position: fixed;
+  top: 65px;
+  left: 210px;
+  width: calc(100% - 210px);
+  height: calc(100% - 65px);
+  margin: auto;
+  background-color: transparent;
+}
+.container .loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+}
+.loader > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+@media screen and (max-device-width: 700px) {
+  .container {
+    display: flex;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 60px);
+    margin: auto;
+    background-color: transparent;
+  }
+}

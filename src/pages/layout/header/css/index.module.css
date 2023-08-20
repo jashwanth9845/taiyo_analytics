@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  padding: 0;
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 0px 6px 0px;
+  transition: all 0.2s ease;
+}
+.container > h3 {
+  width: 100%;
+  text-align: center;
+}
+@media screen and (max-device-width: 700px) {
+  .container {
+    height: 60px;
+    top: 60px;
+    border-top: 1px solid #4abeec;
+    padding: 0 1rem;
+    background-color: white;
+    box-shadow: none;
+    border-bottom: 1px solid #4abeec;
+  }
+  .container > h3 {
+    width: max-content;
+  }
+}

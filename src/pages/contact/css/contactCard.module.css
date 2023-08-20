@@ -1,0 +1,208 @@
+.container {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  background: white;
+  flex-wrap: wrap;
+
+  border-radius: 8px;
+  padding: 0 1rem;
+  margin: 1% 0;
+  box-shadow: #00bcd4 0px 0px 2px 0px;
+  transition: all 0.4s ease-in-out;
+}
+
+.userdata {
+  display: flex;
+  flex-direction: row;
+  width: max-content;
+  gap: 1rem;
+  flex-wrap: wrap;
+
+  height: max-content;
+  transition: all 0.4s ease-in-out;
+}
+.userdata > p {
+  color: rgb(56, 56, 56);
+  transition: all 0.4s ease-in-out;
+}
+.userdata > p > input {
+  color: #086185;
+  font-weight: bold;
+  border: none;
+  width: 100%;
+  max-width: 150px;
+  letter-spacing: 1.3px;
+  transition: all 0.4s ease-in-out;
+}
+.userdata > p > input:focus {
+  outline: none;
+}
+.status {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: max-content;
+  height: max-content;
+  gap: 1rem;
+  transition: all 0.4s ease-in-out;
+}
+
+.status > p {
+  color: rgb(56, 56, 56);
+  transition: all 0.4s ease-in-out;
+}
+.status > p > input,
+.toggleActions > p > span {
+  color: #086185;
+  font-weight: 500;
+  border: none;
+  width: 100%;
+  transition: all 0.4s ease-in-out;
+}
+.toggleActions > p > span {
+  text-transform: capitalize;
+}
+.status > p > input:focus {
+  outline: none;
+}
+.buttonsDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 1rem;
+  justify-content: center;
+}
+.buttonsDiv > button {
+  background: gray;
+  border: none;
+  color: black;
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.buttonsDiv > button:hover {
+  box-shadow: #00000037 0px 0px 4px 0px;
+}
+.buttonsDiv .editbtn {
+  color: #2e7d32;
+  background-color: #a5d6a7;
+}
+.buttonsDiv .deletebtn {
+  color: #c62828;
+  background-color: #ef9a9a;
+}
+
+.editClass {
+  width: 30%;
+  flex-direction: column;
+  justify-content: center;
+  background: white;
+  gap: 1rem;
+  border-radius: 8px;
+  padding: 1rem;
+  height: max-content;
+  margin: 1% 0;
+  box-shadow: #00bcd4 0px 0px 2px 0px;
+  transition: all 0.4s ease-in-out;
+}
+
+.editClass > div {
+  flex-direction: column;
+  width: 100%;
+  transition: all 0.4s ease-in-out;
+}
+.editClass p {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+  transition: all 0.4s ease-in-out;
+}
+.editClass p > span {
+  text-align: center;
+  white-space: nowrap;
+  transition: all 0.4s ease-in-out;
+}
+.editClass p > input {
+  width: 100%;
+  max-width: 100%;
+
+  height: 30px;
+  padding: 0 8px;
+  border-radius: 5px;
+  border: 1px solid #00bcd4;
+  transition: all 0.4s ease-in-out;
+}
+.editClass p > input:focus {
+  border: 1px solid #018799;
+  transition: all 0.4s ease-in-out;
+}
+
+.toggleActions {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  transition: all 0.4s ease-in-out;
+}
+.StatusToggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  gap: 1rem;
+  transition: all 0.4s ease-in-out;
+}
+.StatusToggle label {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  align-items: center;
+  transition: all 0.4s ease-in-out;
+}
+.editClass p {
+  margin: 0;
+  transition: all 0.4s ease-in-out;
+}
+.showWarning {
+  display: none;
+}
+.editClass .showWarning {
+  display: flex;
+  width: 90%;
+  height: max-content;
+  justify-content: center;
+  align-items: center;
+  background-color: #c6282861;
+  color: #c62828;
+  text-align: center;
+  padding: 0.2rem 0;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+button:disabled {
+  pointer-events: none;
+  opacity: 0.7;
+}
+@media screen and (max-device-width: 700px) {
+  .container {
+    gap: 1rem;
+    padding: 1rem;
+  }
+  p {
+    margin: 0;
+  }
+  .status {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .editClass {
+    width: 80%;
+    min-width: 180px;
+  }
+}

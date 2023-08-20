@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 100%;
+  flex-wrap: wrap;
+  transition: all 0.2s ease;
+}
+.graphContainer {
+  background: white;
+  border-radius: 5px;
+  padding: 0.5rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 0px 6px 0px;
+}
