@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/taiyo_analytics/static/css/main.e48125d9.css",
+    "main.js": "/taiyo_analytics/static/js/main.9ca8fb61.js",
+    "index.html": "/taiyo_analytics/index.html",
+    "main.e48125d9.css.map": "/taiyo_analytics/static/css/main.e48125d9.css.map",
+    "main.9ca8fb61.js.map": "/taiyo_analytics/static/js/main.9ca8fb61.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e48125d9.css",
+    "static/js/main.9ca8fb61.js"
+  ]
+}
