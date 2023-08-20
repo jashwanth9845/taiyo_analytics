@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import styles from "../css/index.module.css"; // Import your module CSS
 import Header from "../../layout/header/components";
 import ContactCard from "./contactCrad";
+
+// Sample initial contact data
 let contactstore = [
   {
     id: 1,
@@ -16,24 +18,30 @@ let contactstore = [
     status: "inactive",
   },
 ];
+
 const Contact = () => {
+  // State for managing contact data
   const [contactData, setContactData] = useState();
   const [updateData, setupdateData] = useState(null);
   const [deleteData, setDeleteData] = useState(null);
   const [createContact, setCreateContact] = useState(null);
+
+  // Initialize contact data from the sample store
   useEffect(() => {
     setContactData(contactstore);
   }, [contactstore]);
 
+  // Update contact data when an update operation is requested
   useEffect(() => {
     if (updateData) {
       contactstore = contactstore.map((e) =>
-        e.id == updateData.id ? updateData : e
+        e.id === updateData.id ? updateData : e
       );
       setupdateData(null);
     }
   }, [updateData]);
 
+  // Update contact data when a delete operation is requested
   useEffect(() => {
     if (deleteData) {
       contactstore = contactstore.filter((e) => e.id !== deleteData.id);
@@ -42,11 +50,13 @@ const Contact = () => {
     }
   }, [deleteData]);
 
+  // Function to handle creating a new contact
   const handleCreate = () => {
     contactstore.push({ id: contactstore.length + 1 });
     setCreateContact(contactstore.length);
   };
 
+  // Render the component
   return (
     <>
       <Header currentPage={"Contact"} />

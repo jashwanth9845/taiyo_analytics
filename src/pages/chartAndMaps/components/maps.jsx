@@ -4,10 +4,23 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import Loading from "../../loading/components/Loading";
 
+/**
+ * A React component for displaying cases overview on a map.
+ *
+ * @param {Object} props - Component props
+ * @param {Object[]} props.data - Array of country data objects
+ * @param {boolean} props.isLoading - Indicates if data is currently being loaded
+ * @param {boolean} props.isSuccess - Indicates if data was successfully loaded
+ * @param {string} props.errorMessage - Error message in case of loading failure
+ * @returns {JSX.Element|null} - The rendered component JSX or null
+ */
 const Maps = ({ data: countryData, isLoading, isSuccess, errorMessage }) => {
+  // Render loading spinner while data is being loaded
   if (isLoading) {
     return <Loading />;
   }
+
+  // Render an error message if loading has failed
   if (errorMessage) {
     return (
       <div style={{ position: "relative" }}>
@@ -17,6 +30,8 @@ const Maps = ({ data: countryData, isLoading, isSuccess, errorMessage }) => {
       </div>
     );
   }
+
+  // If loading was successful, render the map
   if (isSuccess) {
     return (
       <div className={styles.container}>
@@ -51,6 +66,9 @@ const Maps = ({ data: countryData, isLoading, isSuccess, errorMessage }) => {
       </div>
     );
   }
+
+  // If no data to display, return null
+  return null;
 };
 
 export default Maps;
